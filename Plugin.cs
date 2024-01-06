@@ -30,9 +30,9 @@ namespace AdvancedCompactor.Redux
         // Token: 0x06000003 RID: 3 RVA: 0x00002098 File Offset: 0x00000298
         private void Start()
         {
-            Plugin.Settings_Key = base.Config.Bind<KeyCode>("compactor_godeeper", "Settings key", (UnityEngine.KeyCode)285, "Opens the seting menu");
-            Plugin.activatekey = base.Config.Bind<KeyCode>("compactor_godeeper", "activation key", (UnityEngine.KeyCode)306, "key for the activation of going deeper");
-            Plugin.changemodekey = base.Config.Bind<KeyCode>("compactor_godeeper", "change mode key", (UnityEngine.KeyCode)284, "key to change mode");
+            Plugin.Settings_Key = base.Config.Bind<KeyCode>("compactor_godeeper", "Settings key", (UnityEngine.KeyCode)285, "Opens the seting menu. Default F4");
+            Plugin.activatekey = base.Config.Bind<KeyCode>("compactor_godeeper", "activation key", (UnityEngine.KeyCode)306, "Key for the activation of going deeper. Default: LeftControl");
+            Plugin.changemodekey = base.Config.Bind<KeyCode>("compactor_godeeper", "change mode key", (UnityEngine.KeyCode)108, "Key to change mode. Default: L");
             Plugin.mode = base.Config.Bind<int>("compactor_godeeper", "mode", (int)0, "0 = digging beneath the player level, 1 = digging above the player level, 2 = placing beneath the player level, 3 = placing above the player level, 4 = remove Path");
             Plugin.depth = base.Config.Bind<int>("compactor_godeeper", "depth", (int)1, "How many blocks the compactor can go down or up. Default:1");
             new Harmony("chilla55.compactor").PatchAll();
